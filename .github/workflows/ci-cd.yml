@@ -115,8 +115,8 @@ jobs:
         with:
           # TODO 5: kết nối bằng các GitHub Secrets SERVER_HOST, SERVER_USER, SERVER_SSH_KEY
           host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secret.SERVER_USER }}
-          key: ${{ secret.SEVER_KEY }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
           envs: APP_IMAGE,APP_TAG,GHCR_USER,GHCR_TOKEN,REPO_URL,DEPLOY_DIR
           script: |
             set -e
